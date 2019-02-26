@@ -23,18 +23,18 @@ class MoviesTable extends Component {
       key: "delete",
       content: movie => (
         <button
-          onClick={() => {
-            this.props.onDelete(movie);
-          }}
-          className="btn btn-lg btn-danger"
+          onClick={() => this.props.onDelete(movie)}
+          className="btn btn-danger btn-sm"
         >
           Delete
         </button>
       )
     }
   ];
+
   render() {
     const { movies, onSort, sortColumn } = this.props;
+
     return (
       <Table
         columns={this.columns}
